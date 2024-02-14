@@ -8,5 +8,5 @@
 		#define NTN_API __declspec(dllimport)
 	#endif
 #else
-	#error NTN only support Windows!
+	#error NTN only supports Windows!
 #endif 
