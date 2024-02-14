@@ -19,6 +19,12 @@
       <Filter>NTNEngine</Filter>
     </ClInclude>
     <ClInclude Include="src\Ntn.h" />
+    <ClInclude Include="src\NTNEngine\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\NTNEngine\Events\EditorEvents.h" />
+    <ClInclude Include="src\NTNEngine\Events\Event.h" />
+    <ClInclude Include="src\NTNEngine\Events\KeyEvent.h" />
+    <ClInclude Include="src\NTNEngine\Events\MouseEvent.h" />
+    <ClInclude Include="src\NTNEngine\Events\KeyCodes.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\NTNEngine\Application.cpp">
