@@ -4,6 +4,9 @@
     <Filter Include="NTNEngine">
       <UniqueIdentifier>{AB18D412-1783-8889-60C1-392FCC6A66DE}</UniqueIdentifier>
     </Filter>
+    <Filter Include="NTNEngine\Events">
+      <UniqueIdentifier>{2FF6B7E3-1BEF-D635-4421-BCBA3079B641}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\NTNEngine\Application.h">
@@ -15,19 +18,37 @@
     <ClInclude Include="src\NTNEngine\EntryPoint.h">
       <Filter>NTNEngine</Filter>
     </ClInclude>
+    <ClInclude Include="src\NTNEngine\Events\ApplicationEvent.h">
+      <Filter>NTNEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\NTNEngine\Events\EditorEvents.h">
+      <Filter>NTNEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\NTNEngine\Events\Event.h">
+      <Filter>NTNEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\NTNEngine\Events\KeyCodes.h">
+      <Filter>NTNEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\NTNEngine\Events\KeyEvent.h">
+      <Filter>NTNEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\NTNEngine\Events\MouseEvent.h">
+      <Filter>NTNEngine\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\NTNEngine\Log.h">
       <Filter>NTNEngine</Filter>
     </ClInclude>
+    <ClInclude Include="src\NTNEngine\pch.h">
+      <Filter>NTNEngine</Filter>
+    </ClInclude>
     <ClInclude Include="src\Ntn.h" />
-    <ClInclude Include="src\NTNEngine\Events\ApplicationEvent.h" />
-    <ClInclude Include="src\NTNEngine\Events\EditorEvents.h" />
-    <ClInclude Include="src\NTNEngine\Events\Event.h" />
-    <ClInclude Include="src\NTNEngine\Events\KeyEvent.h" />
-    <ClInclude Include="src\NTNEngine\Events\MouseEvent.h" />
-    <ClInclude Include="src\NTNEngine\Events\KeyCodes.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\NTNEngine\Application.cpp">
+      <Filter>NTNEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\NTNEngine\pch.cpp">
       <Filter>NTNEngine</Filter>
     </ClCompile>
   </ItemGroup>

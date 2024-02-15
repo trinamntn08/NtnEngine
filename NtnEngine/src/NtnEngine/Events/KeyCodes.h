@@ -1,7 +1,5 @@
 #pragma once
 
-#include <ostream>
-
 namespace NTN
 {
 	typedef enum class KeyCode : uint16_t

@@ -1,7 +1,4 @@
-#include <iostream>
-#include <ctime>
-#include <iomanip>
-#include <string>
+#include"pch.h"
 
 namespace NTN
 {
@@ -11,7 +8,7 @@ namespace NTN
         enum class Level {
             INFO,
             WARNING,
-            ERROR
+            ERROR_OCCURRED
         };
 
         static void Init() {

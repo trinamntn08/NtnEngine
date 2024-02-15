@@ -1,9 +1,7 @@
 #pragma once
-
+#include"..\pch.h"
 #include "Event.h"
 #include "KeyCodes.h"
-
-#include <sstream>
 
 namespace NTN {
 

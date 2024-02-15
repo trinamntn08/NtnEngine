@@ -2,10 +2,6 @@
 
 #include "..\Core.h"
 
-#include <functional>
-#include <ostream>
-#include <string>
-
 namespace NTN {
 
 	// Events in NTN are currently blocking, meaning when an event occurs it
