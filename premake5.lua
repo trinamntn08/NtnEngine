@@ -10,6 +10,12 @@ workspace "NTNEngine"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- Include directories relative to root folder (solution directory)
+IncludeDir={}
+IncludeDir["GLFW"]= "NTNEngine/vendor/GLFW/include"
+
+include "NTNEngine/vendor/GLFW"
+
 project "NTNEngine"
 	location "NTNEngine"
 	kind "SharedLib"
@@ -17,7 +23,8 @@ project "NTNEngine"
 
 	targetdir("bin/".. outputdir .. "/%{prj.name}")
 	objdir("bin-int/".. outputdir .. "/%{prj.name}")
-
+	
+    -- Specify precompiled header settings
 	pchheader "pch.h"
 	pchsource "NTNEngine/src/pch.cpp"
 	
@@ -30,7 +37,15 @@ project "NTNEngine"
 
 	includedirs
 	{
-
+		"%{prj.name}/src",
+		"%{IncludeDir.GLFW}"
+	}
+	
+	links
+	{
+		"GLFW",
+		"opengl32.lib",
+		"dwmapi.lib"
 	}
 
 	filter "system:windows"

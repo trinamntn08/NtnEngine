@@ -7,6 +7,12 @@
     <Filter Include="NTNEngine\Events">
       <UniqueIdentifier>{2FF6B7E3-1BEF-D635-4421-BCBA3079B641}</UniqueIdentifier>
     </Filter>
+    <Filter Include="NTNEngine\Platform">
+      <UniqueIdentifier>{5F45ACCD-4B29-6D23-B489-6776A08C57A5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NTNEngine\Platform\Windows">
+      <UniqueIdentifier>{99DE5C04-85EE-08D5-EEA7-6DF3DAD6F76D}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\NTNEngine\Application.h">
@@ -39,16 +45,24 @@
     <ClInclude Include="src\NTNEngine\Log.h">
       <Filter>NTNEngine</Filter>
     </ClInclude>
-    <ClInclude Include="src\NTNEngine\pch.h">
+    <ClInclude Include="src\NTNEngine\Platform\Windows\WindowsWindow.h">
+      <Filter>NTNEngine\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\NTNEngine\Window.h">
       <Filter>NTNEngine</Filter>
     </ClInclude>
     <ClInclude Include="src\Ntn.h" />
+    <ClInclude Include="src\pch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\NTNEngine\Application.cpp">
       <Filter>NTNEngine</Filter>
     </ClCompile>
-    <ClCompile Include="src\NTNEngine\pch.cpp">
+    <ClCompile Include="src\NTNEngine\Platform\Windows\WindowsWindow.cpp">
+      <Filter>NTNEngine\Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pch.cpp" />
+    <ClCompile Include="src\NTNEngine\Log.cpp">
       <Filter>NTNEngine</Filter>
     </ClCompile>
   </ItemGroup>

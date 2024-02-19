@@ -1,8 +1,9 @@
-#include"pch.h"
+#pragma once
+#include"Core.h"
 
 namespace NTN
 {
-    class Log 
+    class NTN_API Log
     {
     public:
         enum class Level {
@@ -24,7 +25,7 @@ namespace NTN
         }
 
         static void Info(const std::string& logger, const std::string& message) {
-            SetColor(32); // Green color for INFO
+            SetColor(37); // Green color for INFO
             PrintTime();
             std::cout << logger << ": " << message << std::endl;
             ResetColor();
@@ -44,8 +45,8 @@ namespace NTN
             ResetColor();
         }
 
-        static std::string s_coreLogger;
-        static std::string s_clientLogger;
+        static std::string getCoreLogger() { return s_coreLogger; }
+        static std::string getClientLogger() { return s_clientLogger; }
 
     private:
         static void SetColor(int colorCode) {
@@ -56,19 +57,18 @@ namespace NTN
             std::cout << "\033[0m";
         }
 
+        static std::string s_coreLogger;
+        static std::string s_clientLogger;
     };
 
-    std::string Log::s_coreLogger;
-    std::string Log::s_clientLogger;
 
+#define NTN_CORE_INFO(...) ::NTN::Log::Info(::NTN::Log::getCoreLogger(), __VA_ARGS__)
+#define NTN_CORE_WARNING(...) ::NTN::Log::Warning(::NTN::Log::getCoreLogger(), __VA_ARGS__)
+#define NTN_CORE_ERROR(...) ::NTN::Log::Error(::NTN::Log::getCoreLogger(), __VA_ARGS__)
 
-#define NTN_CORE_INFO(...) ::NTN::Log::Info(::NTN::Log::s_coreLogger, __VA_ARGS__)
-#define NTN_CORE_WARNING(...) ::NTN::Log::Warning(::NTN::Log::s_coreLogger, __VA_ARGS__)
-#define NTN_CORE_ERROR(...) ::NTN::Log::Error(::NTN::Log::s_coreLogger, __VA_ARGS__)
-
-#define NTN_CLIENT_INFO(...) ::NTN::Log::Info(::NTN::Log::s_clientLogger, __VA_ARGS__)
-#define NTN_CLIENT_WARNING(...) ::NTN::Log::Warning(::NTN::Log::s_clientLogger, __VA_ARGS__)
-#define NTN_CLIENT_ERROR(...) ::NTN::Log::Error(::NTN::Log::s_clientLogger, __VA_ARGS__)
+#define NTN_CLIENT_INFO(...) ::NTN::Log::Info(::NTN::Log::getClientLogger(), __VA_ARGS__)
+#define NTN_CLIENT_WARNING(...) ::NTN::Log::Warning(::NTN::Log::getClientLogger(), __VA_ARGS__)
+#define NTN_CLIENT_ERROR(...) ::NTN::Log::Error(::NTN::Log::getClientLogger(), __VA_ARGS__)
 
 
 }
