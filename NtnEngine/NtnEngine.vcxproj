@@ -157,6 +157,7 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\NTNEngine\LayerStack.h" />
     <ClInclude Include="src\NTNEngine\Application.h" />
     <ClInclude Include="src\NTNEngine\Core.h" />
     <ClInclude Include="src\NTNEngine\EntryPoint.h" />
@@ -166,6 +167,7 @@
     <ClInclude Include="src\NTNEngine\Events\KeyCodes.h" />
     <ClInclude Include="src\NTNEngine\Events\KeyEvent.h" />
     <ClInclude Include="src\NTNEngine\Events\MouseEvent.h" />
+    <ClInclude Include="src\NTNEngine\Layer.h" />
     <ClInclude Include="src\NTNEngine\Log.h" />
     <ClInclude Include="src\NTNEngine\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\NTNEngine\Window.h" />
@@ -173,7 +175,9 @@
     <ClInclude Include="src\pch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\NTNEngine\LayerStack.cpp" />
     <ClCompile Include="src\NTNEngine\Application.cpp" />
+    <ClCompile Include="src\NTNEngine\Layer.cpp" />
     <ClCompile Include="src\NTNEngine\Log.cpp" />
     <ClCompile Include="src\NTNEngine\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\pch.cpp">

@@ -66,18 +66,20 @@ project "NTNEngine"
 
 	filter "configurations:Debug"
 		defines "NTN_DEBUG"
+		buildoptions "/MDd"
 		optimize "On"
 
 	filter "configurations:Release"
 		defines "NTN_RELEASE"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "NTN_DIST"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter{"system:windows","configurations:Release"}
-		buildoptions "/MT"
 
 
 project "Sandbox"
@@ -116,15 +118,17 @@ project "Sandbox"
 
 	filter "configurations:Debug"
 		defines "NTN_DEBUG"
+		buildoptions "/MDd"
 		optimize "On"
 
 	filter "configurations:Release"
 		defines "NTN_RELEASE"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "NTN_DIST"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter{"system:windows","configurations:Release"}
-		buildoptions "/MT"

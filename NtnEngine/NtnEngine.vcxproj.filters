@@ -53,6 +53,8 @@
     </ClInclude>
     <ClInclude Include="src\Ntn.h" />
     <ClInclude Include="src\pch.h" />
+    <ClInclude Include="src\NTNEngine\Layer.h" />
+    <ClInclude Include="src\NTNEngine\LayerStack.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\NTNEngine\Application.cpp">
@@ -65,5 +67,7 @@
     <ClCompile Include="src\NTNEngine\Log.cpp">
       <Filter>NTNEngine</Filter>
     </ClCompile>
+    <ClCompile Include="src\NTNEngine\Layer.cpp" />
+    <ClCompile Include="src\NTNEngine\LayerStack.cpp" />
   </ItemGroup>
 </Project>

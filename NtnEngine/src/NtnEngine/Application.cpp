@@ -24,6 +24,23 @@ namespace NTN
 		dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(Application::OnWindowClose));
 		
 		NTN_CORE_INFO(e.ToString());
+
+		for (auto it = m_LayerStack.end(); it !=m_LayerStack.begin();)
+		{
+			(*--it)->OnEvent(e);
+			if (e.Handled)
+				break;
+		}
+	}
+
+	void Application::PushLayer(Layer* layer)
+	{
+		m_LayerStack.PushLayer(layer);
+	}
+
+	void Application::PushOverLay(Layer* layer)
+	{
+		m_LayerStack.PushOverlay(layer);
 	}
 
 	bool Application::OnWindowClose(WindowCloseEvent& e)
@@ -38,6 +55,12 @@ namespace NTN
 		{
 			glClearColor(0, 0, 0, 1);
 			glClear(GL_COLOR_BUFFER_BIT);
+
+			for (Layer* layer : m_LayerStack)
+			{
+				layer->OnUpdate();
+			}
+
 			m_Window->OnUpdate();
 		}
 	}

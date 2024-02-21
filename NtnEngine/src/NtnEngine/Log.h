@@ -13,8 +13,8 @@ namespace NTN
         };
 
         static void Init() {
-            s_coreLogger = "NTN Engine";
-            s_clientLogger = "SandBox";
+            s_coreLogger = "NTN_Engine";
+            s_clientLogger = "APP";
         }
 
         static void PrintTime() {
@@ -25,7 +25,7 @@ namespace NTN
         }
 
         static void Info(const std::string& logger, const std::string& message) {
-            SetColor(37); // Green color for INFO
+            SetColor(37); // White color for INFO
             PrintTime();
             std::cout << logger << ": " << message << std::endl;
             ResetColor();
